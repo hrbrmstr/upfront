@@ -4,15 +4,16 @@
 \name{upfront}
 \alias{upfront}
 \alias{upfront-package}
-\title{...}
+\title{Base R Convenience Wrappers That Put Data Up Front}
 \description{
-A good description goes here otherwise CRAN checks fail.
+A series of functions that help use the new built-in pipe operator
+in R without the need for the heft of the tidyverse.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://git.rud.is/hrbrmstr/upfront}
-  \item Report bugs at \url{https://git.rud.is/hrbrmstr/upfront/issues}
+  \item \url{https://github.com/hrbrmstr/upfront}
+  \item Report bugs at \url{https://github.com/hrbrmstr/upfront/issues}
 }
 
 }

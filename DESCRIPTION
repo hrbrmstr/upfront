@@ -1,6 +1,6 @@
 Package: upfront
 Type: Package
-Title: upfront Title Goes Here Otherwise CRAN Checks Fail
+Title: Base R Convenience Wrappers That Put Data Up Front
 Version: 0.1.0
 Date: 2023-10-05
 Authors@R: c(
@@ -8,11 +8,12 @@ Authors@R: c(
            comment = c(ORCID = "0000-0001-5670-2640"))
   )
 Maintainer: Bob Rudis <bob@rud.is>
-Description: A good description goes here otherwise CRAN checks fail.
-URL: https://git.rud.is/hrbrmstr/upfront
-BugReports: https://git.rud.is/hrbrmstr/upfront/issues
+Description: A series of functions that help use the new built-in pipe operator
+    in R without the need for the heft of the tidyverse.
+URL: https://github.com/hrbrmstr/upfront
+BugReports: https://github.com/hrbrmstr/upfront/issues
 Encoding: UTF-8
-License: AGPL
+License: MIT + file LICENSE
 Suggests:
     tinytest
 Depends:

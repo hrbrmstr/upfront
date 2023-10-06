@@ -63,7 +63,7 @@ discard <- function(.x, .p, ...) .x[!map_lgl(.x, .p, ...)]
 compact <- function(.x, .p = identity) discard(.x, function(x) is_empty(.p(x)))
 
 #' Set object names
-#' #' @export
+#' @export
 set_names <- function(object = nm, nm) {
   names(object) <- nm
   object

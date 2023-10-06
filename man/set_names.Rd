@@ -2,12 +2,10 @@
 % Please edit documentation in R/utils.R
 \name{set_names}
 \alias{set_names}
-\title{Set object names
-#' @export}
+\title{Set object names}
 \usage{
 set_names(object = nm, nm)
 }
 \description{
 Set object names
-#' @export
 }

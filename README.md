@@ -62,7 +62,7 @@ The following functions are implemented:
 - `possibly`: More convient try
 - `quietly`: More convenient suppressWarmings
 - `safely`: More convenient try
-- `set_names`: Set object names \#’ @export
+- `set_names`: Set object names
 - `walk`: Less noisy lapply
 - `walk2`: Less noisy, more convenient lapply
 

@@ -65,6 +65,7 @@ The following functions are implemented:
 ## Installation
 
 ``` r
+remotes::install_github("hrbrmstr/upfront")
 ```
 
 NOTE: To use the ‘remotes’ install options you will need to have the

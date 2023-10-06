@@ -396,3 +396,55 @@ walk2 <- function(.x, .y, .f, ...) {
   for (idx in seq_along(.x)) .f(.x[[idx]], .y[[idx]], ...)
   invisible(.x)
 }
+
+#' Convenience data frame sorter
+#' @export
+arrange <- function(data, ..., decreasing = TRUE) {
+  cols <- unlist(as.character(substitute(list(...))))[-1]
+  data[
+    do.call(
+      order,
+      c(
+        lapply(cols, \(.c) data[,.c]),
+        list(na.last = NA, decreasing = decreasing)
+      )
+    ),
+  ] -> out
+  rownames(out) <- NULL
+  out
+}
+
+#' Convenience aggregate
+#' @export
+count <- function(data, ..., .sort = FALSE, .name = "n") {
+  cols <- unlist(as.character(substitute(list(...))))[-1]
+  do.call(
+    base::table,
+    c(
+      lapply(cols, \(.c) data[,.c]),
+      list(
+        dnn = cols
+      )
+    )
+  ) |>
+    as.data.frame.table(
+      responseName = .name
+    ) -> .d
+  .sort <- tolower(.sort[1])
+  if (.sort %in% c("true", "desc")) {
+    .d <- .d[order(.d[[.name]], decreasing = .sort =="desc"),]
+    rownames(.d) <- NULL
+  }
+  .d[.d[[.name]] > 0,]
+}
+
+#' Convenience subset
+#' @export
+dfilter <- base::subset
+
+#' Convenience extract
+#' @export
+dselect <- function(data, ...) {
+  cols <- unlist(as.character(substitute(list(...))))[-1]
+  data[, cols, drop=FALSE]
+}

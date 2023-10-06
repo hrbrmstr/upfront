@@ -24,12 +24,16 @@ without the need for the heft of the tidyverse.
 
 The following functions are implemented:
 
+- `arrange`: Convenience data frame sorter
 - `bind_cols`: More convenient cbind.data.frame
 - `bind_rows`: More convenient do.call(rbind.data.frame, …)
 - `capture_error`: More convenient capture.output
 - `capture_output`: More convenient capture.output
 - `compact`: Discard empty elements
+- `count`: Convenience aggregate
+- `dfilter`: Convenience subset
 - `discard`: Discard elements based on condition
+- `dselect`: Convenience extract
 - `%l0%`: Infix length 0
 - `is_empty`: Infix is empty
 - `is_even`: Infix is even
@@ -85,9 +89,9 @@ packageVersion("upfront")
 
 | Lang | \# Files |  (%) | LoC | (%) | Blank lines | (%) | \# Lines | (%) |
 |:-----|---------:|-----:|----:|----:|------------:|----:|---------:|----:|
-| R    |        3 | 0.38 | 251 | 0.5 |          71 | 0.5 |       95 | 0.5 |
+| R    |        3 | 0.38 | 291 | 0.5 |          75 | 0.5 |      103 | 0.5 |
 | YAML |        1 | 0.12 |   1 | 0.0 |           0 | 0.0 |        0 | 0.0 |
-| SUM  |        4 | 0.50 | 252 | 0.5 |          71 | 0.5 |       95 | 0.5 |
+| SUM  |        4 | 0.50 | 292 | 0.5 |          75 | 0.5 |      103 | 0.5 |
 
 {cloc} 📦 metrics for upfront
 
